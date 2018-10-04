@@ -1,0 +1,34 @@
+﻿@model InitiativeModel
+@{
+    ViewData["Title"] = "Index";
+}
+<form asp-action="GetInitiativeForm" asp-controller="Initiatives" method="post">
+    <input type="hidden" asp-for="returnUrl" />
+    <div class="form-group">
+        <label asp-for="Name">Initiative Name</label>
+        <input type="text" class="form-control" placeholder="Enter your initiative's name"
+               asp-for="Name" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Field">Field</label>
+        <input type="text" class="form-control" placeholder="Enter the field you work in" asp-for="Field" />
+    </div>
+    <div class="form-group">
+        <label asp-for="work">What do you do?</label>
+        <input type="text" class="form-control" asp-for="work" placeholder="Enter your work information">
+    </div>
+    <div class="form-group">
+        <label asp-for="OwnerName">What is your Name?</label>
+        <input type="text" class="form-control" asp-for="OwnerName" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+        <label asp-for="InitiativeAddress">Where do you work?</label>
+        <input type="text" class="form-control" asp-for="InitiativeAddress" placeholder="Enter your work place">
+    </div>
+    <div class="form-group">
+        <label asp-for="imageUpload">Upload your Logo</label>
+        <input type="file" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
